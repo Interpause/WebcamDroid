@@ -148,7 +148,6 @@ class ControlsFragment : Fragment(), ConnectCheckerRtsp, SurfaceHolder.Callback 
         }
         camera = RtspCamera2(surfaceView!!,this)
         camera?.setProtocol(Protocol.UDP)
-        camera?.disableAudio()
         selectorButton?.text = camArgs.name
         surfaceView?.holder?.addCallback(this)
     }
