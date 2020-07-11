@@ -3,26 +3,51 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
-
+    app:startDestination="@id/controlsFragment">
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.interpause.webcamdroid.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
-
+        android:id="@+id/controlsFragment"
+        android:name="com.interpause.webcamdroid.ControlsFragment"
+        android:label="fragment_controls"
+        tools:layout="@layout/fragment_controls" >
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_controlsFragment_to_selectorFragment"
+            app:destination="@id/selectorFragment" />
+        <argument
+            android:name="resX"
+            app:argType="integer"
+            android:defaultValue="1920" />
+        <argument
+            android:name="resY"
+            app:argType="integer"
+            android:defaultValue="1080" />
+        <argument
+            android:name="fps"
+            app:argType="integer"
+            android:defaultValue="30" />
+        <argument
+            android:name="id"
+            app:argType="string"
+            android:defaultValue="1" />
+        <argument
+            android:name="name"
+            app:argType="string"
+            android:defaultValue="default" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.interpause.webcamdroid.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
-
+        android:id="@+id/aboutFragment"
+        android:name="com.interpause.webcamdroid.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" >
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_aboutFragment_to_controlsFragment"
+            app:destination="@id/controlsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectorFragment"
+        android:name="com.interpause.webcamdroid.SelectorFragment"
+        android:label="SelectorFragment" >
+        <action
+            android:id="@+id/action_selectorFragment_to_controlsFragment"
+            app:destination="@id/controlsFragment" />
     </fragment>
 </navigation>

@@ -1,12 +1,19 @@
 <resources>
     <string name="app_name">WebcamDroid</string>
     <string name="action_settings">Settings</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="cam_addr_info">Connected! %1$s</string>
+    <string name="cam_addr_init">Stream has not started!</string>
+    <string name="btn_start">Start</string>
+    <string name="btn_stop">Stop</string>
+
+    <string name="bitrate_info">Bitrate: %1$d</string>
+    <string name="rtp_auth_error">Failed to authenticate with RTP server</string>
+    <string name="rtp_connect_error">Failed to connect: %1$s</string>
+    <string name="encoder_error">An error has occurred with the encoder</string>
+
+    <string name="request_cam_permissions">Application requires camera access</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pick_camera">Pick Camera</string>
 </resources>
